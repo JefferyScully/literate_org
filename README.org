@@ -12,11 +12,11 @@ Installing the cdk and using a language like python will require a few steps.
       I have not been successful using the GUI installer for MacOS, so use the CLI example instead.
       [[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html][Install CLI for MacOS]]
 
-     #+begin_src shell :tangle "install_cli_macos.sh"
+#+begin_src shell :tangle "install_cli_macos.sh"
 #!/bin/sh
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
-     #+end_src
+#+end_src
 
    b. Create your credentials file
 
@@ -33,11 +33,11 @@ touch credentials
 
       Place the following in your credentials file, you are able to have and use multiple profiles if you need to work from more than one AIM users or accounts.
 
-     #+begin_src org
+#+begin_src org
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY_HERE
 aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
-     #+end_src
+#+end_src
 
 2. Ensure you have node installed and install AWS CDK for node
 
