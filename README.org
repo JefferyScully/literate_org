@@ -90,7 +90,7 @@ https://docs.aws.amazon.com/cdk/latest/guide/work-with.html#work-with-prerequisi
 https://aws.amazon.com/cli/
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 
-* Finding help
+* Finding help with the CDK
 
 ** AWS Developers Guide
 
@@ -114,5 +114,22 @@ There is support for multiple languages, the core library is written in javascri
 
 Here is a link to examples written in python.
 
-[[https://github.com/aws-samples/aws-cdk-examples/tree/master/python][Python AWS CDK Examples]]
+[[https://github.com/aws-samples/aws-cdk-examples/tree/master/python
+][Python AWS CDK Examples]]
 
+* Working with the CDK
+** File structure
+
+Basic file Structure
+
+#+begin_src org
+ec2-cloudwatch
+├── README.md
+├── app.py
+├── cdk.json
+├── aws_python_modules
+│   ├── __init__.py
+│   └── ec2_module.py
+├── requirements.txt
+└── setup.py
+#+end_src
