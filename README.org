@@ -89,7 +89,6 @@ https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-python.html
 https://docs.aws.amazon.com/cdk/latest/guide/work-with.html#work-with-prerequisites
 https://aws.amazon.com/cli/
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
-*
 
 * Finding help
 
@@ -103,7 +102,7 @@ AWS has a developers guide that gives basic examples, best practices when using 
 
 This is an exhaustive resources for the API, going into great depth.
 
-https://docs.aws.amazon.com/cdk/api/latest/docs/aws-construct-library.html
+[[https://docs.aws.amazon.com/cdk/api/latest/docs/aws-construct-library.html][AWS CDK API docs]]
 
 ** AWS provided examples
 
@@ -115,6 +114,5 @@ There is support for multiple languages, the core library is written in javascri
 
 Here is a link to examples written in python.
 
-https://github.com/aws-samples/aws-cdk-examples/tree/master/python
-
+[[https://github.com/aws-samples/aws-cdk-examples/tree/master/python][Python AWS CDK Examples]]
 
