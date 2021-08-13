@@ -7,10 +7,10 @@ This file is a study of AWS's cdk for python for creating cloud resources at a h
 * Installing the CDK for MacOS
 
 Installing the cdk and using a language like python will require a few steps.
-1. Install CLI and setup AWS CLI, including having your aws user credentials setup.
-   a. For MacOS
-      I have not been successful using the GUI installer for MacOS, so use the CLI example instead.
-      [[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html][Install CLI for MacOS]]
+** Install CLI and setup AWS CLI, including having your aws user credentials setup.
+*** For MacOS
+I have not been successful using the GUI installer for MacOS, so use the CLI example instead.
+[[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html][Install CLI for MacOS]]
 
 #+begin_src shell :tangle "install_cli_macos.sh"
 #!/bin/sh
@@ -18,9 +18,9 @@ curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 #+end_src
 
-   b. Create your credentials file
+*** Create your credentials file
 
-      Create a folder in your home directory called ".aws/" and put the "credentials" file in it
+Create a folder in your home directory called ".aws/" and put the "credentials" file in it
 
 #+begin_src shell :tangle "create_user_credentials.sh"
 #!/bin/sh
@@ -29,9 +29,9 @@ touch credentials
 #+end_src
 
 
-   c. Setup your credentials file
+*** Setup your credentials file
 
-      Place the following in your credentials file, you are able to have and use multiple profiles if you need to work from more than one AIM users or accounts.
+Place the following in your credentials file, you are able to have and use multiple profiles if you need to work from more than one AIM users or accounts.
 
 #+begin_src org
 [default]
@@ -39,7 +39,11 @@ aws_access_key_id = YOUR_ACCESS_KEY_HERE
 aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 #+end_src
 
-2. Ensure you have node installed and install AWS CDK for node
+
+*** Run aws config to ensure your credential file is loaded
+
+
+** Ensure you have node installed and install AWS CDK for node
 
 
 
@@ -47,6 +51,7 @@ https://docs.aws.amazon.com/cdk/latest/guide/work-with-cdk-python.html
 https://docs.aws.amazon.com/cdk/latest/guide/work-with.html#work-with-prerequisites
 https://aws.amazon.com/cli/
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+*
 
 * Finding help
 
@@ -73,3 +78,4 @@ There is support for multiple languages, the core library is written in javascri
 Here is a link to examples written in python.
 
 https://github.com/aws-samples/aws-cdk-examples/tree/master/python
+
