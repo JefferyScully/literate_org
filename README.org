@@ -6,7 +6,7 @@ This file is a study of AWS's cdk for python for creating cloud resources at a h
 
 * Installing the CDK for MacOS
 
-Installing the cdk and using a language like python will require a few steps.
+Installing the cdk and using a language like python will require a few steps. Please refer to offical documentation for the most up to date requirements.
 ** Install CLI and setup AWS CLI, including having your aws user credentials setup.
 *** For MacOS
 I have not been successful using the GUI installer for MacOS, so use the CLI example instead.
@@ -20,7 +20,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 *** Create your credentials file
 
-Create a folder in your home directory called ".aws/" and put the "credentials" file in it
+Create a folder in your home directory called ".aws/" and put the "credentials" file in it.
 
 #+begin_src shell :tangle "create_user_credentials.sh"
 #!/bin/sh
@@ -28,22 +28,60 @@ mkdir ~/.aws/ && cd ~/.aws/
 touch credentials
 #+end_src
 
-
 *** Setup your credentials file
 
 Place the following in your credentials file, you are able to have and use multiple profiles if you need to work from more than one AIM users or accounts.
+[[https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/guide_credentials_profiles.html][AWS configure file]]
+
 
 #+begin_src org
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY_HERE
 aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+# region = us-west-2
+# and many more options
 #+end_src
 
+*** Run aws configure
 
-*** Run aws config to ensure your credential file is loaded
+With a basic configure file, some defaults will be used, like for region and output format.
+[[https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-region][AWS configure command]]
 
+#+begin_src shell
+$ aws configure
+#+end_src
 
 ** Ensure you have node installed and install AWS CDK for node
+*** Install the NODE AWS CDK toolkit
+
+- The "-g" flag is for global install
+
+#+begin_src shell
+$ npm install -g aws-cdk
+#+end_src
+
+** Installing the CDK for python
+*** Create your desired project file path and initialize with the node CDK
+
+
+#+begin_src shell :tangle "create_cdk_project.sh"
+#!/bin/sh
+mkdir my-project
+cd my-project
+cdk init app --language python
+#+end_src
+
+*** Activate your venv that was created by the AWS CDK
+
+#+begin_src org
+$ source .venv/bin/activate
+#+end_src
+
+*** Install the requirements.txt
+
+#+begin_src org
+$ python -m pip install -r requirements.txt
+#+end_src
 
 
 
@@ -78,4 +116,5 @@ There is support for multiple languages, the core library is written in javascri
 Here is a link to examples written in python.
 
 https://github.com/aws-samples/aws-cdk-examples/tree/master/python
+
 
